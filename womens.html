@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women's Collection | Lee's Trendy Treasures</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="top-bar">
+        <p>FREE SHIPPING THIS WEEK ORDER OVER - $55</p>
+    </div>
+
+    <header>
+        <div class="header-main">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="../assets/logo.png" alt="Lee's Trendy Treasures Logo" class="site-logo">
+                </a>
+            </div>
+
+            <div class="center-column">
+                <h1 class="main-title">LEE'S TRENDY TREASURES</h1>
+                
+                <div class="search-container">
+                    <input type="text" placeholder="Enter your product name...">
+                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </div>
+
+            <div class="header-user-icons">
+                <a href="login.html"><i class="fa-solid fa-user"></i></a>
+                <a href="#"><i class="fa-solid fa-heart"></i></a>
+                <a href="cart.html" class="cart-icon-wrapper">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="icon-cart-count">0</span>
+                </a>
+            </div>
+        </div>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="index.html#featured">FEATURED</a></li>
+                <li><a href="womens.html" class="active">WOMEN'S</a></li>
+                <li><a href="mens.html">MEN'S</a></li>
+                <li><a href="about us.html">ABOUT US</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="product-container">
+            <h2 class="category-title">Women's Collection</h2>
+            
+            <div class="grid">
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="../assets/necklace-rose-gold.jpg" alt="Rose Gold">
+                    </div>
+                    <div class="product-info">
+                        <h3>Rose Gold Piece</h3>
+                        <p class="price">$55.00</p>
+                        <button class="add-to-cart" onclick="addToCart('Rose Gold Piece', 55.00, '../Assets/necklace-rose-gold.jpeg')">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="../assets/heart.jpg" alt="Heart Necklace">
+                    </div>
+                    <div class="product-info">
+                        <h3>Heart Necklace</h3>
+                        <p class="price">$15.00</p>
+                        <button class="add-to-cart" onclick="addToCart('Heart Necklace', 15.00, '../Assets/heart.jpg')">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="../assets/Spring.jpg" alt="Spring">
+                    </div>
+                    <div class="product-info">
+                        <h3>Spring Necklace</h3>
+                        <p class="price">$35.00</p>
+                        <button class="add-to-cart" onclick="addToCart('Spring Necklace', 35.00, '../Assets/Spring.jpg')">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="../assets/goldheart.jpg" alt="Gold Heart">
+                    </div>
+                    <div class="product-info">
+                        <h3>Expensive Gold Necklace</h3>
+                        <p class="price">$75.00</p>
+                        <button class="add-to-cart" onclick="addToCart('Expensive Gold Necklace', 75.00, '../Assets/goldheart.jpg')">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="../assets/DIVA.jpg" alt="Diva Earrings">
+                    </div>
+                    <div class="product-info">
+                        <h3>New Gold Earrings</h3>
+                        <p class="price">$95.00</p>
+                        <button class="add-to-cart" onclick="addToCart('New Gold Earrings', 95.00, '../Assets/DIVA.jpg')">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="../assets/GabrielandCo_.jpg" alt="Heart Necklace">
+                    </div>
+                    <div class="product-info">
+                        <h3>Heart Necklace</h3>
+                        <p class="price">$35.00</p>
+                        <button class="add-to-cart" onclick="addToCart('Heart Necklace', 35.00, '../Assets/GabrielandCo_.jpg')">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="../assets/gold-drop-earrings.jpg" alt="Gold Drop Earrings">
+                    </div>
+                    <div class="product-info">
+                        <h3>Gold Drop Earrings</h3>
+                        <p class="price">$55.00</p>
+                        <button class="add-to-cart" onclick="addToCart('Gold Drop Earrings', 55.00, '../Assets/gold-drop-earrings.jpg')">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="../assets/ruby-gold-earring.jpg" alt="Ruby Gold Earrings">
+                    </div>
+                    <div class="product-info">
+                        <h3>Ruby Gold Earrings</h3>
+                        <p class="price">$55.00</p>
+                        <button class="add-to-cart" onclick="addToCart('Ruby Gold Earrings', 55.00, '../Assets/ruby-gold-earring.jpg')">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="../assets/huggies-earrings.jpg" alt="Huggies Earrings">
+                    </div>
+                    <div class="product-info">
+                        <h3>Huggies Earrings</h3>
+                        <p class="price">$20.00</p>
+                        <button class="add-to-cart" onclick="addToCart('Huggies Earrings', 20.00, '../Assets/huggies-earrings.jpg')">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="../assets/leaf-earrings.jpg" alt="Leaf Earrings">
+                    </div>
+                    <div class="product-info">
+                        <h3>Leaf Earrings</h3>
+                        <p class="price">$45.00</p>
+                        <button class="add-to-cart" onclick="addToCart('Leaf Earrings', 45.00, '../Assets/leaf-earrings.jpg')">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="../assets/longface.jpg" alt="Longface Earrings">
+                    </div>
+                    <div class="product-info">
+                        <h3>Longface Earrings</h3>
+                        <p class="price">$25.00</p>
+                        <button class="add-to-cart" onclick="addToCart('Longface Earrings', 25.00, '../Assets/longface.jpg')">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="../assets/pandora.jpg" alt="Pandora Style">
+                    </div>
+                    <div class="product-info">
+                        <h3>Pandora Style</h3>
+                        <p class="price">$50.00</p>
+                        <button class="add-to-cart" onclick="addToCart('Pandora Style', 50.00, '../Assets/pandora.jpg')">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="../assets/pink-b.jpg" alt="Pink Bracelet">
+                    </div>
+                    <div class="product-info">
+                        <h3>Pink Bracelet</h3>
+                        <p class="price">$15.00</p>
+                        <button class="add-to-cart" onclick="addToCart('Pink Bracelet', 15.00, '../Assets/pink-b.jpg')">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="../assets/sterling-b.jpg" alt="Sterling Bracelet">
+                    </div>
+                    <div class="product-info">
+                        <h3>Sterling Bracelet</h3>
+                        <p class="price">$25.00</p>
+                        <button class="add-to-cart" onclick="addToCart('Sterling Bracelet', 25.00, '../Assets/sterling-b.jpg')">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="../assets/stone-b.jpg" alt="Stone Bracelet">
+                    </div>
+                    <div class="product-info">
+                        <h3>Stone Bracelet</h3>
+                        <p class="price">$25.00</p>
+                        <button class="add-to-cart" onclick="addToCart('Stone Bracelet', 25.00, '../Assets/stone-b.jpg')">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="../assets/gold-bracelet.jpg" alt="Gold Bracelet">
+                    </div>
+                    <div class="product-info">
+                        <h3>Gold Bracelet</h3>
+                        <p class="price">$50.00</p>
+                        <button class="add-to-cart" onclick="addToCart('Gold Bracelet', 50.00, '../Assets/gold-bracelet.jpg')">Add to Cart</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer style="text-align: center; padding: 20px; color: #787878;">
+        <p>&copy; 2026 Lee's Trendy Treasures | Student: Caryl Lee (2305803)</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

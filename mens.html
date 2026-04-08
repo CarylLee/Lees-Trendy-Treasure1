@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men's Collection | Lee's Trendy Treasures</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="top-bar">
+        <p>FREE SHIPPING THIS WEEK ORDER OVER - $55</p>
+    </div>
+
+    <header>
+        <div class="header-main">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="../assets/logo.png" alt="Lee's Trendy Treasures Logo" class="site-logo">
+                </a>
+            </div>
+
+            <div class="center-column">
+                <h1 class="main-title">LEE'S TRENDY TREASURES</h1>
+                
+                <div class="search-container">
+                    <input type="text" placeholder="Enter your product name...">
+                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </div>
+
+            <div class="header-user-icons">
+                <a href="login.html"><i class="fa-solid fa-user"></i></a>
+                <a href="#"><i class="fa-solid fa-heart"></i></a>
+                <a href="cart.html" class="cart-icon-wrapper">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="icon-cart-count">0</span>
+                </a>
+            </div>
+        </div>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="womens.html">WOMEN'S</a></li>
+                <li><a href="mens.html" class="active">MEN'S</a></li>
+                <li><a href="about us.html">ABOUT US</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="product-container">
+            <h2 class="category-title">Men's Collection</h2>
+            
+            <div class="grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="../assets/watch1.jpg" alt="Classic Steel Watch">
+                    </div>
+                    <div class="product-info">
+                        <h3>Classic Steel Watch</h3>
+                        <p class="price">$55.00</p>
+                        <button class="add-to-cart" onclick="addToCart('Classic Steel Watch', 55.00, '../Assets/watch1.jpg')">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="../assets/watch2.jpg" alt="Executive Watch">
+                    </div>
+                    <div class="product-info">
+                        <h3>Executive Watch</h3>
+                        <p class="price">$75.00</p>
+                        <button class="add-to-cart" onclick="addToCart('Executive Watch', 75.00, '../Assets/watch2.jpg')">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="../assets/watch3.png" alt="Sleek Watch">
+                    </div>
+                    <div class="product-info">
+                        <h3>Sleek Watch</h3>
+                        <p class="price">$75.00</p>
+                        <button class="add-to-cart" onclick="addToCart('Sleek Watch', 75.00, '../Assets/watch3.png')">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="../assets/watch4.jpg" alt="Expensive Gold Watch">
+                    </div>
+                    <div class="product-info">
+                        <h3>Expensive Gold Watch</h3>
+                        <p class="price">$75.00</p>
+                        <button class="add-to-cart" onclick="addToCart('Expensive Gold Watch', 75.00, '../Assets/watch4.jpg')">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="../assets/watch5.jpg" alt="New Edition Watch">
+                    </div>
+                    <div class="product-info">
+                        <h3>New Edition Watch</h3>
+                        <p class="price">$95.00</p>
+                        <button class="add-to-cart" onclick="addToCart('New Edition Watch', 95.00, '../Assets/watch5.jpg')">Add to Cart</button>
+                    </div>
+                </div>
+            </div> 
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Lee's Trendy Treasures | Student: Caryl Lee (2305803)</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

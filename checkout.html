@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | LEE'S TRENDY TREASURES</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        </header>
+
+    <main class="checkout-container">
+        <h2 class="category-title">Checkout</h2>
+        
+        <div class="checkout-wrapper" style="display: flex; gap: 30px; padding: 20px 5%;">
+            <form id="checkout-form" style="flex: 2;">
+                <h3>Shipping & Billing</h3>
+                <div class="input-group">
+                    <label>Full Name</label>
+                    <input type="text" id="cust-name" required placeholder="Caryl Lee">
+                </div>
+                <div class="input-group">
+                    <label>Email Address</label>
+                    <input type="email" id="cust-email" required placeholder="caryl@example.com">
+                </div>
+                <div class="input-group">
+                    <label>Shipping Address</label>
+                    <input type="text" id="cust-address" required placeholder="123 Hope Road, Kingston">
+                </div>
+                
+                <h3>Payment Information</h3>
+                <div class="input-group">
+                    <label>Card Number</label>
+                    <input type="text" placeholder="1234 5678 9101 1121" required>
+                </div>
+                <div style="display: flex; gap: 10px;">
+                    <div class="input-group">
+                        <label>Expiry</label>
+                        <input type="text" placeholder="MM/YY" required>
+                    </div>
+                    <div class="input-group">
+                        <label>CVV</label>
+                        <input type="text" placeholder="123" required>
+                    </div>
+                </div>
+            </form>
+
+            <div class="order-summary-box" style="flex: 1; background: #fff; padding: 20px; border-radius: 10px; border: 1px solid #ddd; height: fit-content;">
+                <h3>Your Order</h3>
+                <hr style="margin: 15px 0;">
+                <div id="checkout-items-list">
+                    </div>
+                <div style="display: flex; justify-content: space-between; font-weight: bold; font-size: 1.2rem; margin-top: 20px;">
+                    <span>Grand Total:</span>
+                    <span id="checkout-total">$0.00</span>
+                </div>
+                <button type="submit" form="checkout-form" class="auth-pink-btn" style="margin-top: 20px;">PLACE ORDER</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        window.onload = function() {
+            displayCheckoutSummary();
+        };
+    </script>
+</body>
+</html>

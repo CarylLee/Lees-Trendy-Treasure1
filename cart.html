@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart | LEE'S TRENDY TREASURES</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="top-bar">
+        <p>FREE SHIPPING THIS WEEK ORDER OVER - $55</p>
+    </div>
+
+    <header>
+        <div class="header-main">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="../Assets/logo.png" alt="Lee's Trendy Treasures Logo" class="site-logo">
+                </a>
+            </div>
+
+            <div class="center-column">
+                <h1 class="main-title">LEE'S TRENDY TREASURES</h1>
+                
+                <div class="search-container">
+                    <input type="text" placeholder="Enter your product name...">
+                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </div>
+
+            <div class="header-user-icons">
+                <a href="login.html" title="My Account"><i class="fa-solid fa-user"></i></a>
+                <a href="#" title="My Wishlist"><i class="fa-solid fa-heart"></i></a>
+                <a href="cart.html" title="View Cart" class="cart-icon-wrapper">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="icon-cart-count">0</span>
+                </a>
+            </div>
+        </div>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="womens.html">WOMEN'S</a></li>
+                <li><a href="mens.html">MEN'S</a></li>
+                <li><a href="about us.html">ABOUT US</a></li>
+                <li><a href="cart.html" class="active">CART</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="cart-container">
+        <h2 class="category-title">Shopping Cart</h2>
+        
+        <div class="cart-wrapper">
+            <table class="cart-table">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Subtotal</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items">
+                </tbody>
+            </table>
+
+            <div class="cart-summary">
+                <div class="summary-box">
+                    <h3>Order Summary</h3>
+                    <div class="summary-item">
+                        <span>Total:</span>
+                        <span id="cart-total">$0.00</span>
+                    </div>
+                    <button class="checkout-btn">PROCEED TO CHECKOUT</button>
+                    <a href="index.html" class="continue-shopping">Continue Shopping</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Lee's Trendy Treasures | Student: Caryl Lee (2305803)</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

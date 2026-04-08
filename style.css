@@ -1,0 +1,617 @@
+/* --- 1. GLOBAL VARIABLES & RESET --- */
+:root {
+--primary-pink: #ff4d6d;
+--brand-teal: #008080;
+--bg-pink: #fcd1f6;
+--bg-light: #fdf0f2;
+--text-dark: #333;
+--text-teal: #007070;
+--border-light: #ececec;
+--white: #ffffff;
+}
+
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+body {
+font-family: 'Georgia', 'Times New Roman', serif;
+background-color: var(--bg-pink);
+color: var(--text-dark);
+line-height: 1.6;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+/* --- 2. HEADER & NAVIGATION --- */
+
+.top-bar {
+background-color: #f1b6fa;
+color: #4a148c;
+padding: 8px 5%;
+font-size: 13px;
+text-transform: uppercase;
+letter-spacing: 1px;
+font-family: 'Segoe UI', sans-serif;
+}
+
+header {
+background-color: var(--white);
+padding: 10px 5%;
+border-bottom: 1px solid var(--border-light);
+position: relative;
+top: 0;
+z-index: 1000;
+}
+
+.header-main {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding-bottom: 15px;
+}
+
+.logo-container {
+flex: 1; 
+}
+
+.site-logo {
+height: 150px;
+width: auto;
+}
+
+/* The Search Engine */
+.search-container {
+flex: 2; 
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.search-container input {
+width: 100%;
+max-width: 350px;
+padding: 8px 12px;
+border: 1px solid #ccc;
+border-radius: 4px 0 0 4px;
+outline: none;
+}
+
+.search-btn {
+padding: 8px 12px;
+background: #fff;
+border: 1px solid #ccc;
+border-left: none;
+border-radius: 0 4px 4px 0;
+cursor: pointer;
+color: var(--text-dark);
+}
+
+.header-user-icons {
+flex: 1; 
+display: flex;
+justify-content: flex-end;
+gap: 20px;
+font-size: 1.3rem;
+}
+
+/* Navbar below the main header area */
+.navbar {
+width: 100%;
+border-top: 1px solid var(--border-light);
+padding: 15px 0;
+background-color: var(--white);
+}
+
+.navbar ul {
+display: flex;
+justify-content: center;
+list-style: none;
+gap: 40px; 
+margin: 0;
+padding: 0;
+}
+
+.navbar a {
+text-decoration: none;
+font-weight: 700; 
+color: var(--text-dark);
+text-transform: uppercase;
+font-size: 14px;
+letter-spacing: 1px;
+transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+color: var(--primary-pink);
+}
+
+/* --- 3. HERO SECTION --- */
+.hero {
+background-color: #fce4ec; 
+height: 350px;
+display: flex;
+align-items: center;
+padding: 0 8%;
+margin: 30px 5%;
+border-radius: 20px; 
+}
+
+.hero-content {
+max-width: 500px;
+}
+
+.hero h2 {
+font-size: 2.8rem;
+color: #2c3e50;
+margin-bottom: 5px;
+font-family: 'Georgia', serif;
+}
+
+.hero p {
+font-size: 1.2rem;
+color: #555;
+font-weight: 500;
+}
+
+/* --- 4. PRODUCT GRID & CARDS --- */
+.product-container {
+padding: 40px 5%;
+}
+
+.category-title {
+font-size: 2rem;
+color: var(--text-teal);
+margin-bottom: 30px;
+border-left: 5px solid var(--primary-pink);
+padding-left: 15px;
+}
+
+.grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+gap: 30px;
+}
+
+.product-card {
+background: var(--white);
+border: 1px solid var(--border-light);
+border-radius: 12px;
+overflow: hidden; 
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+display: flex;
+flex-direction: column;
+}
+
+.product-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.product-image {
+width: 100%;
+height: 280px;
+background-color: #adedfd;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.product-image img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+/* Info Section & Buttons */
+.product-info {
+padding: 20px;
+text-align: center;
+flex-grow: 1;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+
+.product-info h3 {
+font-size: 1.1rem;
+color: var(--text-teal);
+margin-bottom: 10px;
+}
+
+.product-info .price {
+font-weight: bold;
+color: var(--primary-pink);
+font-size: 1.2rem;
+ margin-bottom: 15px;
+}
+
+.add-to-cart {
+background: var(--brand-teal);
+color: var(--white);
+border: none;
+padding: 12px;
+border-radius: 8px;
+cursor: pointer;
+font-family: 'Segoe UI', sans-serif;
+font-weight: 600;
+text-transform: uppercase;
+transition: background 0.3s, transform 0.1s;
+}
+
+.add-to-cart:hover {
+background: #006666;
+}
+
+.add-to-cart:active {
+transform: scale(0.96);
+}
+
+/* --- 5. CART PAGE STYLING --- */
+.cart-container {
+max-width: 1100px;
+margin: 40px auto;
+padding: 20px;
+background: var(--white);
+border-radius: 15px;
+}
+
+.cart-table {
+width: 100%;
+border-collapse: collapse;
+margin-bottom: 30px;
+}
+
+.cart-table th {
+background-color: var(--text-dark);
+color: var(--white);
+padding: 15px;
+text-align: left;
+}
+
+.cart-table td {
+padding: 15px;
+border-bottom: 1px solid var(--border-light);
+}
+
+.cart-product-detail {
+display: flex;
+align-items: center;
+gap: 15px;
+}
+
+.cart-product-detail img {
+width: 60px;
+height: 60px;
+object-fit: cover;
+border-radius: 5px;
+}
+
+.cart-summary {
+text-align: right;
+padding: 20px;
+border-top: 2px solid var(--border-light);
+}
+
+.total-amount {
+font-size: 1.5rem;
+color: var(--primary-pink);
+font-weight: bold;
+}
+
+.checkout-btn {
+background-color: var(--text-dark);
+color: var(--white);
+padding: 15px 40px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+margin-top: 15px;
+}
+
+/* --- 6. AUTH PAGES (Login/Signup) --- */
+.auth-page {
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 80vh;
+}
+
+.auth-card {
+background: var(--white);
+padding: 40px;
+border-radius: 12px;
+box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+width: 100%;
+max-width: 400px;
+text-align: center;
+}
+
+.input-group {
+text-align: left;
+margin-bottom: 20px;
+}
+
+.input-group input {
+width: 100%;
+padding: 12px;
+border: 1px solid var(--border-light);
+border-radius: 8px;
+}
+
+.auth-pink-btn {
+width: 100%;
+background-color: var(--primary-pink);
+color: var(--white);
+padding: 14px;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+ font-weight: bold;
+}
+
+/* Specific styling for the Auth/Login Page Header */
+.auth-header {
+text-align: center;
+padding: 20px 0;
+background: #fff;
+border-bottom: 1px solid #eee;
+}
+
+.auth-header .site-logo {
+height: 80px; 
+width: auto;
+margin-bottom: 15px;
+}
+
+.auth-header .navbar ul {
+display: flex;
+justify-content: center;
+gap: 25px;
+list-style: none;
+padding: 0;
+}
+
+/* --- LOGIN/SIGNUP SPECIFIC STYLES TO MATCH SCREENSHOT --- */
+
+/* Centers the logo inside the card and gives it space */
+.auth-card-logo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.auth-card-logo img {
+  max-width: 180px; /* Adjust size as needed, matches screenshot proportion */
+  height: auto;
+}
+
+.login-section {
+    background-color: #fcd1f6; 
+    min-height: 100vh; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    padding: 20px;
+}
+
+/* Updated Login Card spacing to feel less cramped */
+.login-card {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  width: 100%;
+  padding: 50px 40px 40px 40px; 
+  max-width: 400px;
+  text-align: center;
+  box-sizing: border-box;
+
+}
+
+/* Match the input styling exactly to the screenshot */
+.input-group input {
+  padding: 14px 12px; 
+  font-size: 16px;
+  border: 1px solid #ddd; 
+}
+
+/* THIS IS THE KEY FIX: The standard CSS has a small button.
+  We are adding/re-confirming the style for the WIDE PINK BUTTON.
+*/
+.auth-pink-btn {
+  width: 100%;
+  background-color: var(--primary-pink); 
+  color: var(--white);
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: capitalize; 
+  margin-top: 15px; 
+  transition: background-color 0.3s;
+}
+
+.auth-pink-btn:hover {
+  background-color: #ff3356; 
+}
+
+#cart-items td[colspan="5"] {
+padding: 50px;
+font-size: 1.2rem;
+color: var(--text-gray);
+font-style: italic;
+}
+
+/* --- ABOUT US PAGE STYLING --- */
+.about-hero {
+text-align: center;
+padding: 60px 5%;
+background-color: var(--bg-light);
+margin-bottom: 40px;
+}
+
+.about-hero h1 {
+font-size: 3rem;
+color: var(--brand-teal);
+margin-bottom: 10px;
+}
+
+.about-content {
+display: flex;
+align-items: center;
+gap: 50px;
+padding: 0 10% 80px;
+max-width: 1200px;
+margin: 0 auto;
+}
+
+.about-page-header .header-main {
+ flex-direction: column; /* Stacks everything vertically */
+ justify-content: center;
+ gap: 15px;
+}
+
+/* --- About Container Styling --- */
+#site-logo {
+ max-width: 250px;
+ height: auto;
+ margin-bottom: 15px;
+}
+
+.navbar ul {
+list-style: none;
+ padding: 0;
+display: flex;
+ justify-content: center;
+ gap: 20px;
+
+}
+.navbar a {
+ text-decoration: none;
+ color: var(--text-dark);
+ font-weight: bold;
+font-size: 14px;
+text-transform: uppercase;
+}
+.navbar a:hover {
+ color: var(--primary-pink);
+}
+.about-container {
+max-width: 700px;
+margin: 50px auto;
+background: white;
+padding: 40px;
+border-radius: 15px;
+box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+border-top: 6px solid var(--primary-pink);
+
+}
+
+.about-section h1 {
+text-align: center;
+margin-bottom: 30px;
+}
+.developer-info p {
+ margin: 15px 0;
+ font-size: 16px;
+border-bottom: 1px solid var(--border-color);
+ padding-bottom: 8px;
+
+}
+.developer-info strong {
+color: var(--primary-pink);
+ display: inline-block;
+width: 150px;
+}
+.contact-box {
+ text-align: center;
+margin-top: 40px;
+}
+
+.contact-btn {
+ display: inline-block;
+ background-color: var(--primary-pink);
+ color: white;
+ padding: 12px 25px;
+ text-decoration: none;
+ border-radius: 5px;
+ font-weight: bold;
+ transition: 0.3s;
+}
+.contact-btn:hover {
+background-color: #333;
+}
+
+/* Enable Smooth Scrolling when a category is clicked */
+
+html {
+scroll-behavior: smooth;
+}
+
+.about-image {
+ flex: 1;
+}
+
+.about-image img {
+width: 100%;
+border-radius: 20px;
+ box-shadow: 20px 20px 0px var(--bg-pink); 
+}
+
+.about-text {
+ flex: 1;
+}
+
+.about-text h2 {
+font-size: 2.2rem;
+margin-bottom: 20px;
+ color: var(--text-dark);
+}
+
+.about-text p {
+margin-bottom: 15px;
+font-size: 1.1rem;
+color: #555;
+}
+
+.about-features {
+ display: flex;
+ gap: 30px;
+margin-top: 30px;
+}
+
+.feature {
+display: flex;
+ flex-direction: column;
+align-items: center;
+font-weight: bold;
+color: var(--brand-teal);
+}
+
+.feature i {
+font-size: 2rem;
+ margin-bottom: 10px;
+ color: var(--primary-pink);
+}
+
+/* Responsive fix for mobile */
+@media (max-width: 768px) {
+     .about-content {
+flex-direction: column;
+ padding: 0 5% 40px;
+}
+}
+
+/* --- 7. FOOTER --- */
+footer {
+text-align: center;
+padding: 30px;
+background: var(--white);
+margin-top: 50px;
+border-top: 1px solid var(--border-light);
+}
